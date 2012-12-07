@@ -1,0 +1,116 @@
+.hero-unit, .hero-unit > div { 
+	position:relative;
+}
+
+.hero-unit > div { 
+    width:80%;
+}
+
+#gauge { 
+    position: absolute;
+    right:0px;
+    bottom:0;
+    width:220px;
+    height:200px;
+}
+
+#gauge-canvas { 
+    width:220px;
+    top:70px;
+    position:relative;
+}
+
+#gauge-label { 
+	position:absolute;
+	top:60px;
+	left:0;
+	right:0;
+	text-align:center;
+	font-weight:bold;
+	font-size:28px;
+}
+
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  float:left;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 35px;
+  line-height: 30px;
+}
+
+#tiles .span2 {
+	font-size:18px;
+	padding-top:10px;
+	cursor: pointer;
+	position:relative;
+}
+
+.span2 .badge {
+    position:absolute;
+    top:4px;
+    right:4px;
+}
+
+#tiles .loading {
+  background-color: #E0E0E0;
+  /* background-color: #FCF8E3; */
+}
+
+.indicator {
+	min-height: 20px;
+	background: url("loading.gif") 50% 50% no-repeat;
+}
+
+.p-name {
+  text-align:center;
+  font-size:28px;
+  margin-top:8px;
+}
+
+.p-time { 
+	font-size:13px;
+	line-height:18px; 
+}
+
+.span2 > hr  {
+	margin:4px 10px 4px 10px;
+	padding:0;
+	border-top:2px solid #333;
+	border-bottom:1px solid #333;
+}
+
+.span2:hover {
+  background: #ddd;
+}
+
+.show-grid .show-grid {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
+}
+
+#timer .progress {
+	margin-top:10px;
+	margin-bottom:none;
+}
+
+.navbar-inner {
+	min-height:46px;
+}
+
+.navbar .brand {
+	color:#f6f6f6;
+	width:110px;
+}
+
+
+

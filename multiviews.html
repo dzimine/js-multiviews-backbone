@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multi-views</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dzimine, SoftwareFrontier.com">
+
+    <!-- Le styles -->
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container hidden" id="timer">
+          <div class="brand">Time: <span>4:28</span></div>
+          <div class="progress progress-success">
+              <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Multi View Prototype</h1>
+        <div>
+        <p>
+        Multiple views views fire AJAX requests against REST backend. 
+        Each view sends a request every second. Backend responds in 2 sec.
+        Browser throttles HTTP requests (6 for FF and Webkit).
+        Pending requests queue up (request count shows per view and total).  
+        </p>
+        <p><a id="btn-start" class="btn btn-primary btn-large" tabindex="0">Start load &raquo;</a></p>
+        </div>
+        <div id="gauge" class="hidden">
+            <canvas id="gauge-canvas"></canvas>
+            <div id="gauge-label"></div>
+        </div>
+      </div>
+
+   <div id="tiles">
+    <!-- inserted by JS -->
+  </div>
+   
+      <hr>
+
+      <footer>
+        <p>&copy; Dmitri Zimin(e) 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+	<!-- Bootstrap JS (TODO: weed what we don't need -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <!--script src="assets/js/bootstrap-modal.js"></script-->
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <!--script src="assets/js/bootstrap-carousel.js"></script-->
+    <!-- DZ: my additions  -->
+	<script src="assets/js/underscore.js"></script>
+    <script src="assets/js/backbone.js"></script>
+    <script src="assets/js/gauges/gauge.min.js"></script>
+
+    <script src="timer.js"></script>
+    <script src="multiviews.js"></script>
+    
+    <script type="text/template" id="tile-template">
+	      <p class="p-name"><%= name %><span class="badge"><%=active%></span></p>
+          <hr>
+          <p class="p-time">Last updated:<br /> <%= timestamp %><br /></p>
+          <p class="p-name"><%=time %> ms</p>
+		  <div class="indicator"></div>
+    </script>
+
+  </body>
+</html>

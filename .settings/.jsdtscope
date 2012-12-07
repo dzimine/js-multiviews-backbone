@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="assets/*|assets/js/|node_modules/**" kind="src" path=""/>
+	<classpathentry excluding="**|bootstrap*|google-code-prettify/" kind="src" path="assets/js"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
